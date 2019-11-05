@@ -56,15 +56,23 @@ def stack_pass(n):
 	for i in range(n):
 		v1.add(n-i)
 	print('')
-	print('lets move a stakc of' + ' ' + str(20) + ' ' + 'numbers ordered descendently to another stack using a third stack.')
+	print('lets move a stack of' + ' ' + str(20) + ' ' + 'numbers ordered descendently to another stack using a third stack.')
 	move(n, 1,2,v1,v2,v3)
 
 
-
-stack_pass(5)
-
-# reported_move(25,1,3,list(range(25)),[],[])
-
-# THE ABOVE ONE WILL TAKE MORE THAN ONE HOUR!!!
-
-
+print('Select a positive number n, we will send a stack of n numbers ordered descendently to another stack using a third stack as an intermediare')
+print('')
+while True:
+	n = input(' Please, select a value for n : ')
+	try:
+		x = int(n)
+		if x < 1:
+			print('The number you selected is not positive, please try again')
+			print('')
+		else:
+			stack_pass(x)
+			print('')
+			print('LETS DO THIS AGAIN, SHALL WE?')
+	except:
+		print('Error, select a positive integer ')
+		print('')

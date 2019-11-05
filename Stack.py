@@ -5,10 +5,10 @@ class Stack():
 		self.name = name
 		self.top = -1
 		self.mark = []
-	def add(self,x):
+	def add(self,x): #ADD ONE ELEMENT AT THE TOP OF THE STACK
 		self.top += 1
 		self.mark.append(x)
-	def pop(self):
+	def pop(self): # REMOVE TOP ELEMENT FROM THE STACK
 		if self.top > 0:
 			self.mark = self.mark[0:self.top]
 			self.top -= 1
@@ -19,10 +19,10 @@ class Stack():
 			else:
 				print('')
 				print('ERROR WHILE TRYING TO POP. THERE IS NOTHING TO POP')
-	def point(self):
+	def point(self): # SHOW THE VALUE OF THE TOP OF THE STACK
 		return self.mark[self.top]
 
-	def transfer(self, receiver):
+	def transfer(self, receiver): # SEND TOP ELEMENT FROM ONE STACK TO ANOTHER, PLACING IT ON THE TOP OF THE RECEIVER STACK
 		if self.top == -1:
 			print('')
 			print('ERROR WHILE TRYING TO POP. THERE IS NOTHING TO POP')
