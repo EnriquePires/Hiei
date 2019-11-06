@@ -39,6 +39,25 @@ class Stack():
 			print(receiver.mark)
 			print('')
 
+	def attach(self, transfer_stack): # TRANSFER ALL ELEMENTS FROM ONE TRANSFER STACK TO ANOTHER STACK
+		while transfer_stack.top != -1:
+			transfer_stack.transfer(self)
+		return self
+
+	def dive(self,receiver_stack): # BASICALLY THE CONTRARY OF ATTACH
+		return receiver_stack.attach(self)
+
+	def reverse(self): # Creates a stack called equal to your original stack with the elements of your stacked flipped face down. WARNING this method empties your stack
+		return self.dive(generate_stack(string_name = self.name))
+
+
+def generate_stack(list = [], string_name = 'Unnamed stack'):
+	z = Stack(string_name)
+	for x in list:
+		z.add(x)
+	return z
+
+
 
 
 			

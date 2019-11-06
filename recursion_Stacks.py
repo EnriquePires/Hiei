@@ -62,7 +62,9 @@ def stack_pass(n):
 
 print('Select a positive number n, we will send a stack of n numbers ordered descendently to another stack using a third stack as an intermediare')
 print('')
-while True:
+
+exit = 'No'
+while exit == 'No':
 	n = input(' Please, select a value for n : ')
 	try:
 		x = int(n)
@@ -71,8 +73,25 @@ while True:
 			print('')
 		else:
 			stack_pass(x)
-			print('')
-			print('LETS DO THIS AGAIN, SHALL WE?')
+			while True:
+				print('')
+				print('LETS DO THIS AGAIN, SHALL WE?')
+				print('')
+				print('Y) YES, SIR!')
+				print('N) NO')
+				print('')
+				action = input('Please mark Y or N : ')
+				if action in ['Y', 'Yes', 'YES', 'Yes, Sir', 'YES, SIR', 'YES, SIR!', 'Yes, Sir!', 'yes', 'yes, sir', 'yes, sir!']:
+					break
+				if action in ['N', 'No', 'NO']:
+					print('Thank you for using this Stack program, see you later!!! ')
+					exit = 'Si'
+					break
+				else:
+					print('Invalid option, try again dude ')
+
+
+
 	except:
 		print('Error, select a positive integer ')
 		print('')
