@@ -1,3 +1,3 @@
 # Hiei
 
-Welcome, here I will put some python code developed during my free time.
+Some basic Python stuff i do on my free time.
