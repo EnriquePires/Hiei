@@ -1,18 +1,21 @@
+#Find the minimum and place it in the first position and continue with the remaining of the array
 def selection_sort(array):
 	c = 0
 	while c < len(array):
-		mini = c
+		minimum = c
 		for x in range(c+1,len(array)):
-			if array[x] < array[mini]:
-				mini = x
+			if array[x] < array[minimum]:
+				minimum = x
 		temp = array[c]
-		array[c] = array[mini]
-		array[mini] = temp
+		array[c] = array[minimum]
+		array[minimum] = temp
 		c += 1
 	return array
 
+#Test
 print(selection_sort([1,4,2,3,1,7,2]))
 
+#Push each member of the array to the right as long until finding a bigger one 
 def bubble_sort(array):
 	n = len(array)
 	while n>1:
@@ -31,11 +34,12 @@ def bubble_sort(array):
 			n -= 1
 	return array
 
-
+#Test
 print(bubble_sort([1,4,2,3,1,7,2]))
 
+#Insertion sort algorithm
 def insertion_sort(array):
-	i = 0
+	i = 1
 	while i < len(array):
 		value = array[i]
 		j = i-1
@@ -53,11 +57,11 @@ def insertion_sort(array):
 	return array
 
 
-
+#Test
 print(insertion_sort([1,4,2,3,1,7,2]))
 
 
-
+#Divide and conquer algorithm
 def merge_sort(array):
 	if len(array) == 1:
 		return array
@@ -88,6 +92,7 @@ def merge_sort(array):
 
 		return array
 
+#Test
 print(merge_sort([1,4,2,3,1,7,2]))
 
 
